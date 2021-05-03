@@ -4,6 +4,7 @@
 
 #include <iostream>
 using namespace std;
+#include <typeinfo>
 //define template
 template <class T>
 //function defenition
@@ -24,6 +25,11 @@ int main()
 template<class T>
 T half(T value)
 {
-	//turn value
+	//test for type double or float
+	if (typeid(value).name() == "double" || typeid(value).name() == "float");
+	{
+		return (value / 2);
+	}
+	//if not double or float, convert into int
 	return static_cast<int>(round((value / 2.0)));
 }
