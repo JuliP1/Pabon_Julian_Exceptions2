@@ -6,6 +6,8 @@
 using namespace std;
 //define template
 template <class T>
+//function defenition
+T half(T value);
 
 int main()
 {
@@ -17,4 +19,11 @@ int main()
 	cout << half(a) << endl;
 	cout << half(b) << endl;
 	cout << half(c) << endl;
+}
+
+template<class T>
+T half(T value)
+{
+	//turn value
+	return static_cast<int>(round((value / 2.0)));
 }
